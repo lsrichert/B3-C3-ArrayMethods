@@ -15,11 +15,7 @@ const planetSection = document.createElement("section")
 planetSection.textContent = onePlanet 
 planetEl.appendChild(planetSection)
 
-
-
 console.log(onePlanet);
-
-
 }
 
 planets.forEach(addPlanet)
@@ -29,20 +25,28 @@ planets.forEach(addPlanet)
 // first letter of each planet is capitalized. Use the
 // toUpperCase()` method on strings.
 
-// const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
-
-
-
-
-// console.log(planets);
-// planets.map(toUpper);
+// this is the map method
 
 const capPlanets = planets.map(function (singlePlanet) {
-    return singlePlanet.toUpperCase
-
-})
+    return singlePlanet.charAt(0).toUpperCase() + singlePlanet.slice(1);
+});
 
 console.log(capPlanets);
+
+
+// Use the filter method to create a new array that
+// contains planets with the letter 'e'. Use the `includes()`
+// method on strings.
+
+
+const planetsWithE = capPlanets.filter(function (planet) {
+    return planet.includes("e");
+})
+
+console.log(planetsWithE);
+
+
+
 
 
 
